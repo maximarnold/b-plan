@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Restaurant">
+  <rect width="96" height="96" rx="18" fill="#f3f7e8"/>
+  <path d="M20 43 48 22l28 21v35H20z" fill="#304735"/>
+  <path d="M31 53h34v25H31z" fill="#fff7df"/>
+  <path d="M39 61h18v17H39z" fill="#c64538"/>
+  <path d="M16 46h64" stroke="#c64538" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="48" cy="41" r="7" fill="#fff7df"/>
+</svg>
