@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B-plan</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel" aria-label="Game controls">
+        <div class="brand">
+          <h1>B-plan</h1>
+          <p>Paper-grid food chain rivalry</p>
+        </div>
+
+        <div class="score-strip" aria-label="Current score">
+          <div class="score-card red-score">
+            <span id="redName">Bun Battalion</span>
+            <strong id="redScore">0</strong>
+          </div>
+          <div class="score-card blue-score">
+            <span id="blueName">Griddle Guild</span>
+            <strong id="blueScore">0</strong>
+          </div>
+        </div>
+
+        <div class="controls">
+          <label>
+            Grid size
+            <span class="field-pair">
+              <input id="gridWidth" type="number" min="12" max="40" value="20" aria-label="Grid width">
+              <span>x</span>
+              <input id="gridHeight" type="number" min="12" max="40" value="20" aria-label="Grid height">
+            </span>
+          </label>
+
+          <label>
+            Obstacles
+            <select id="obstacleRate">
+              <option value="0.08">Light</option>
+              <option value="0.13" selected>Medium</option>
+              <option value="0.18">Heavy</option>
+            </select>
+          </label>
+
+          <label>
+            Rival
+            <select id="blueControl">
+              <option value="human" selected>Human</option>
+              <option value="computer">Computer</option>
+            </select>
+          </label>
+
+          <div class="building-picker" aria-label="Building type">
+            <span>Building</span>
+            <div class="building-grid">
+              <button class="building-button selected" type="button" data-building="bar" aria-label="Bar, 3 by 3, ready now" aria-pressed="true" title="Bar, 3x3, ready now">
+                <img src="./assets/bar.svg" alt="">
+                <span>Bar</span>
+                <small id="barMeta">Ready</small>
+              </button>
+              <button class="building-button" type="button" data-building="cafe" aria-label="Cafe, 4 by 4, needs 2 progress turns" aria-pressed="false" title="Cafe, 4x4, needs 2 progress turns">
+                <img src="./assets/cafe.svg" alt="">
+                <span>Cafe</span>
+                <small id="cafeMeta">0 ready</small>
+              </button>
+              <button class="building-button" type="button" data-building="restaurant" aria-label="Restaurant, 5 by 5, needs 3 progress turns" aria-pressed="false" title="Restaurant, 5x5, needs 3 progress turns">
+                <img src="./assets/restaurant.svg" alt="">
+                <span>Rest.</span>
+                <small id="restaurantMeta">0 ready</small>
+              </button>
+              <button class="building-button" type="button" data-building="eatery" aria-label="Eatery, 1 by 1, needs 5 progress turns" aria-pressed="false" title="Eatery, 1x1, needs 5 progress turns">
+                <img src="./assets/eatery.svg" alt="">
+                <span>Eatery</span>
+                <small id="eateryMeta">0 ready</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button id="newGame" type="button">New game</button>
+            <button id="progressBuild" type="button">Progress</button>
+          </div>
+        </div>
+
+        <div class="ledger" aria-label="Game status">
+          <div>
+            <span>Turn</span>
+            <strong id="turnLabel">Bun Battalion</strong>
+          </div>
+          <div>
+            <span>Selected</span>
+            <strong id="selectedLabel">Bar</strong>
+          </div>
+          <div>
+            <span>Open tiles</span>
+            <strong id="openLabel">0</strong>
+          </div>
+          <p id="message" class="message">Place a ready building, or progress the selected one.</p>
+        </div>
+      </section>
+
+      <section class="board-zone" aria-label="B-plan game board">
+        <canvas id="board" width="960" height="960"></canvas>
+      </section>
+    </main>
+
+    <script src="./game.js?v=8"></script>
+  </body>
+</html>
