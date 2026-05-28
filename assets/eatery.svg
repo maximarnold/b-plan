@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Eatery">
+  <rect width="96" height="96" rx="18" fill="#fff4ec"/>
+  <path d="M30 23v35m9-35v35m-14-2h18" stroke="#48534b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M64 22v56" stroke="#48534b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M55 25c14 5 17 24 9 34" fill="none" stroke="#c64538" stroke-width="6" stroke-linecap="round"/>
+  <path d="M25 78h46" stroke="#26758f" stroke-width="7" stroke-linecap="round"/>
+</svg>
